@@ -12,7 +12,7 @@ const ProfileCard = ({ name, role, semester, university }) => {
         <a href="https://github.com/Norahs-00" target="_blank" rel="noreferrer">
           GitHub
         </a>
-        <a href="#" target="_blank" rel="noreferrer">
+        <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noreferrer">
           LinkedIn
         </a>
       </div>
