@@ -1,23 +1,41 @@
-import logo from './logo.svg';
+// src/App.js
+import React from 'react';
+import ProfileCard from './components/ProfileCard';
+import SkillList from './components/SkillList';
+import ProjectCard from './components/ProjectCard';
+import { profileData } from './data'; // ONLY KEEP THIS ONE
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="app">
+      <header>
+        <h1>My Developer Portfolio</h1>
       </header>
+      
+      <main>
+        <ProfileCard 
+          name={profileData.name}
+          role={profileData.role}
+          semester={profileData.semester}
+          university={profileData.university}
+        />
+        
+        <SkillList skills={profileData.skills} />
+        
+        <section className="projects-section">
+          <h3>My Projects</h3>
+          <div className="projects-grid">
+            {profileData.projects.map((project, index) => (
+              <ProjectCard key={index} {...project} />
+            ))}
+          </div>
+        </section>
+      </main>
+      
+      <footer>
+        <p>© 2023 Sharon Gurung | Built with React</p>
+      </footer>
     </div>
   );
 }
