@@ -9,10 +9,10 @@ const ProfileCard = ({ name, role, semester, university }) => {
       <h2>{role}</h2>
       <p>{semester} • {university}</p>
       <div className="social-links">
-        <a href="https://github.com/Norahs-00" target="_blank" rel="noreferrer">
+        <a href="https://github.com/Norahs-00" target="_blank" rel="noopener noreferrer">
           GitHub
         </a>
-        <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noreferrer">
+        <a href="https://www.linkedin.com/in/sharon-grg-157524282/" target="_blank" rel="noopener noreferrer">
           LinkedIn
         </a>
       </div>
